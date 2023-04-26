@@ -1,23 +1,12 @@
-# @property
-class Dog():
-    def __init__(self, name):
-        self.__name = name
+_data = {
+    "p_name": "Ivan",
+    "p_last_name": "Ivanov",
+    "p_second_name": "Ivanovich",
+}
 
-    @property
-    def name(self):
-        return self.__name
+p_name = _data["p_name"]
+p_last_name = _data["p_last_name"]
+p_second_name = _data["p_second_name"]
 
-    @name.setter
-    def name(self, value):
-        self.__name = value
-
-    @name.deleter
-    def name(self):
-        print('Deleting...')
-        del self.__name
-
-
-dog2 = Dog('Buddy')
-print(dog2.name)
-dog2.name = 'Buddy Jr.'
-print(dog2.name)
+result = f'{p_last_name} {p_name} {p_second_name}'
+print(result)
